@@ -31,3 +31,4 @@ This application will run express server and also serve static pages to client u
   ```
 
 - Run `npm start` to start the express server
+- Point your browser to `localhost:3000`
