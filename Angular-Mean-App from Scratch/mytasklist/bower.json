@@ -1,0 +1,21 @@
+{
+  "name": "mytasklist",
+  "description": "task manager",
+  "main": "server.js",
+  "authors": [
+    "jaskiratr <jaskiratr@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "client/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}
