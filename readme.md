@@ -2,7 +2,7 @@
 
 I've tried putting together various ways of setting up a basic MEAN stack application. As a new learner, setting it up from scratch is the most helpful. Refer to the readme for in the relevant folder for that method.
 
-It is also much more appropriate to run node server and angular client in separate shells. It becomes easier to obtain relevant error and warnings. 
+It is also much more appropriate to run node server and angular client in separate shells. It becomes easier to obtain relevant error and warnings.
 
 ## Option 1 : Use Express-generator and Angular QuickStart Repository
 This application will run express server and also serve static pages to client using Angular2. It will also build the .js files from typescript while running the server.
@@ -76,6 +76,12 @@ yo ng2-meanstack
 
 ---
 ## Miscellaneous
+
+Links:
+- [Angular QuickStart](https://angular.io/docs/ts/latest/quickstart.html)
+- [Tutorial: MEAN App from scratch](https://www.youtube.com/watch?v=PFP0oXNNveg)
+- [MEAN-Learning Git](https://github.com/ericdouglas/MEAN-Learning)
+- [Angular-cli](https://github.com/angular/angular-cli)
 
 ### Installing SocketIO
 Install socketIO for node server

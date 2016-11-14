@@ -1,8 +1,9 @@
 # Creating a MEAN App from scratch
-## Credits: Brad Traversy (https://www.youtube.com/watch?v=PFP0oXNNveg)
+*Credits: Brad Traversy (https://www.youtube.com/watch?v=PFP0oXNNveg)*
 
 The following steps follow the tutorial. There maybe a couple of small changes.
 
+### Setting up Express
 
 `npm init`
 Walk through the process. Enter 'server.js' as the entrypoint.
@@ -85,7 +86,8 @@ Create 'views' folder in root and create index.html in it.
 </html>
 ```
 
----
+### Setting up Mongodb on MLab
+
 Create a free sandbox database on MLab https://mlab.com/
 In MLab, go to your database and add a user
 Go to Collections and create a new one 'tasks'
@@ -190,8 +192,7 @@ module.exports = router;
 
 ```
 
----
-## Angular2 setup
+### Angular2 setup
 
 Create a client folder in the root.
 According to documentation on Angular.io, create 3 config files in /client.
@@ -390,7 +391,7 @@ Go to /client and run `npm start` from a new shell
 
 Go to `localhost:3000` in your browser to verify there are no errors in console.
 
----
+### Install Twitter Bootstrap CSS
 
 Install bower
 `npm install -g bower`
@@ -410,8 +411,8 @@ bower install bootstrap --save
 
 Add bootstrap to `client/index.html`
 
----
-## UI
+
+### UI
 
 Create `client\app\components\tasks` folder
 Create `tasks.component.js` and `tasks.component.html` in it
@@ -538,7 +539,7 @@ export class AppModule { }
 
 ```
 
-Import TaskService in tasks.component.ts
+Import TaskService in `tasks.component.ts`
 ```
 import { Component } from '@angular/core';
 import {TaskService} from '../../services/task.service';
@@ -556,7 +557,7 @@ export class TasksComponent {
 
 You should see "Task service initialized..." in browser console
 
-task.service.ts
+`task.service.ts`
 ```
 import {Injectable} from '@angular/core';
 import {Http, Headers} from '@angular/http';
@@ -574,6 +575,7 @@ export class TaskService {
   }
 }
 ```
+
 Create `client/task.ts` file  as a model
 ```
 export class Task{
@@ -583,7 +585,7 @@ export class Task{
 }
 ```
 
-tasks.component.ts
+`tasks.component.ts`
 ```
 import { Component } from '@angular/core';
 import {TaskService} from '../../services/task.service';
@@ -606,7 +608,7 @@ export class TasksComponent {
 }
 ```
 
-Populate tasks.component.html
+Populate `tasks.component.html`
 ```
 <form class="well">
   <div class="form-group">
@@ -630,7 +632,7 @@ Populate tasks.component.html
 
 ```
 
-Add Forms Module in app.module.ts
+Add Forms Module in `app.module.ts`
 ```
 import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -647,7 +649,8 @@ import { TasksComponent } from './components/tasks/tasks.component';
 
 export class AppModule { }
 ```
-To add task modify form in tasks.component.html
+
+To add task modify form in `tasks.component.html`
 ```
 <form class="well" (submit) = "addTask($event)">
   <div class="form-group">
@@ -670,7 +673,7 @@ To add task modify form in tasks.component.html
 </div>
 ```
 
-Create addTask Service in task.service.ts
+Create addTask Service in `task.service.ts`
 ```
 import {Injectable} from '@angular/core';
 import {Http, Headers} from '@angular/http';
@@ -696,7 +699,7 @@ export class TaskService {
 }
 ```
 
-task.component.ts
+`task.component.ts`
 ```
 import { Component } from '@angular/core';
 import {TaskService} from '../../services/task.service';
@@ -736,7 +739,7 @@ export class TasksComponent {
 }
 ```
 
-For delete task modify tasks.component.html
+For delete task modify `tasks.component.html`
 ```
 <form class="well" (submit) = "addTask($event)">
   <div class="form-group">
@@ -759,7 +762,7 @@ For delete task modify tasks.component.html
   </div>
 </div>
 ```
-task.component.ts
+`task.component.ts`
 ```
 import { Component } from '@angular/core';
 import {TaskService} from '../../services/task.service';
@@ -813,7 +816,7 @@ export class TasksComponent {
 }
 ```
 
-task.service.ts
+`task.service.ts`
 ```
 import {Injectable} from '@angular/core';
 import {Http, Headers} from '@angular/http';
@@ -847,7 +850,7 @@ export class TaskService {
 ```
 
 Update check boxes for completed tasks
-tasks.component.html
+`tasks.component.html`
 ```
 <form class="well" (submit) = "addTask($event)">
   <div class="form-group">
@@ -871,7 +874,7 @@ tasks.component.html
 </div>
 
 ```
-tasks.component.ts
+`tasks.component.ts`
 ```
 import { Component } from '@angular/core';
 import {TaskService} from '../../services/task.service';
@@ -939,7 +942,7 @@ export class TasksComponent {
 
 ```
 
-tasks.service.ts
+`tasks.service.ts`
 ```
 import {Injectable} from '@angular/core';
 import {Http, Headers} from '@angular/http';
